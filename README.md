@@ -38,7 +38,7 @@ openFrameworks addons should be added as submodules in the ExternalAddons addons
 	cd ExternalAddons
 	git submodule add https://github.com/local-projects/ofxAddonName.git
 
-When adding an addon to a project, make sure a relative path is used. Tools such as Adam Carlucci's [OF Plugin for Xcode](http://) should take care of this automatically, setting the paths to something like `../../ExternalAddons/ofxAddonName...` instead of the normal `../../../addons/ofxAddonName...`. You want to make sure it's not an absolute path such as `/Users/youraccount/Code/Project/ExternalAddons/ofxAddonName...` because everyone will hate you.
+When adding an addon to a project, make sure a relative path is used. Tools such as Adam Carlucci's [OF Plugin for Xcode](https://github.com/admsyn/OFPlugin) should take care of this automatically, setting the paths to something like `../../ExternalAddons/ofxAddonName...` instead of the normal `../../../addons/ofxAddonName...`. You want to make sure it's not an absolute path such as `/Users/youraccount/Code/Project/ExternalAddons/ofxAddonName...` because everyone will hate you.
 
 ### BaseApp
 In the sketches folder is a starter project called BaseApp, which serves the same purpose as OF's emptyExample, though the paths inside Xcode's project.pbxproj file have been modified with our file structure since it different from the openFrameworks norm. Copy BaseApp and use it as your starting point for new Apps and Sketches.
