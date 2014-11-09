@@ -59,3 +59,6 @@ includes all scripts needed to start / stop / report crash etc for the installta
 
 ### Scripts
 Random scripts that might help for development / testing (i.e. pull json files and clean, update submodules, etc)
+
+### Shared
+Project-specific code that is shared among Sketches and/or Apps.
