@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0194561A62E5080077EBEF /* ofxHistoryPlot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D0194541A62E5080077EBEF /* ofxHistoryPlot.cpp */; };
 		4D30968C1A62031600B27E84 /* ofxRemoteUI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D30967E1A62031600B27E84 /* ofxRemoteUI.cpp */; };
 		4D30968D1A62031600B27E84 /* ofxRemoteUIClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D3096801A62031600B27E84 /* ofxRemoteUIClient.cpp */; };
 		4D30968E1A62031600B27E84 /* ofxRemoteUINeigbors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D3096821A62031600B27E84 /* ofxRemoteUINeigbors.cpp */; };
@@ -84,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D0194541A62E5080077EBEF /* ofxHistoryPlot.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxHistoryPlot.cpp; sourceTree = "<group>"; };
+		4D0194551A62E5080077EBEF /* ofxHistoryPlot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxHistoryPlot.h; sourceTree = "<group>"; };
 		4D30967D1A62031600B27E84 /* dirent_vs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dirent_vs.h; sourceTree = "<group>"; };
 		4D30967E1A62031600B27E84 /* ofxRemoteUI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofxRemoteUI.cpp; sourceTree = "<group>"; };
 		4D30967F1A62031600B27E84 /* ofxRemoteUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofxRemoteUI.h; sourceTree = "<group>"; };
@@ -198,6 +201,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0194521A62E5080077EBEF /* ofxHistoryPlot */ = {
+			isa = PBXGroup;
+			children = (
+				4D0194531A62E5080077EBEF /* src */,
+			);
+			name = ofxHistoryPlot;
+			sourceTree = "<group>";
+		};
+		4D0194531A62E5080077EBEF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4D0194541A62E5080077EBEF /* ofxHistoryPlot.cpp */,
+				4D0194551A62E5080077EBEF /* ofxHistoryPlot.h */,
+			);
+			name = src;
+			path = ../../ExternalAddons/ofxHistoryPlot/src;
+			sourceTree = "<group>";
+		};
 		4D30967B1A62031600B27E84 /* ofxRemoteUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +429,7 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				4D0194521A62E5080077EBEF /* ofxHistoryPlot */,
 				4D3096D51A62038100B27E84 /* ofxXmlSettings */,
 				4D3096A01A62036B00B27E84 /* ofxOsc */,
 				4D3096991A62031A00B27E84 /* ofxTimeMeasurements */,
@@ -595,6 +617,7 @@
 				4D3096D21A62036B00B27E84 /* OscPrintReceivedElements.cpp in Sources */,
 				4D3096D41A62036B00B27E84 /* OscTypes.cpp in Sources */,
 				4D3096E81A6207F500B27E84 /* NetworkingUtils.cpp in Sources */,
+				4D0194561A62E5080077EBEF /* ofxHistoryPlot.cpp in Sources */,
 				4D3096CD1A62036B00B27E84 /* ofxOscParameterSync.cpp in Sources */,
 				4D3096CF1A62036B00B27E84 /* ofxOscSender.cpp in Sources */,
 				4D3096E91A6207F500B27E84 /* UdpSocket.cpp in Sources */,
@@ -697,6 +720,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				GCC_PREPROCESSOR_DEFINITIONS = USE_OFX_HISTORYPLOT;
 				ICON = "$(ICON_NAME_DEBUG)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
@@ -785,6 +809,7 @@
 				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../../openFrameworks/libs/glut/lib/osx\"";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_MODEL_TUNING = NONE;
+				GCC_PREPROCESSOR_DEFINITIONS = USE_OFX_HISTORYPLOT;
 				ICON = "$(ICON_NAME_RELEASE)";
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";

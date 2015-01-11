@@ -34,36 +34,25 @@ void ofApp::setup(){
     // setup ofxRemoteUI
     RUI_SETUP();
     RUI_SET_CALLBACK(ruiServerCallback);
-    // OFX_REMOTEUI_SERVER_SETUP(); 	//start server
-    
     // TODO: setup params here
     RUI_NEW_GROUP("App");
     RUI_DEFINE_VAR_WV(bool, "app-fullscreen", false);
-
     RUI_LOAD_FROM_XML();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-    TS_START("Update");
-
     float dt = (1.f/60.f); // elapsed time (60 fps)
 
     if(bRecalcNow){
         // TODO: perform post-param-change updates
         ofSetFullscreen(RUI_VAR(bool, "app-fullscreen"));
     }
-    
-    TS_STOP("Update");
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-    TS_START("Draw");
-
-    ofBackgroundGradient(ofColor(150), ofColor(170));
-
-    TS_STOP("Draw");
+    ofBackgroundGradient(ofColor(120), ofColor(170));
 }
 
 //--------------------------------------------------------------

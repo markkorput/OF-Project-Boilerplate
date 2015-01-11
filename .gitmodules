@@ -10,3 +10,6 @@
 [submodule "ExternalAddons/ofxTimeMeasurements"]
 	path = ExternalAddons/ofxTimeMeasurements
 	url = git@github.com:armadillu/ofxTimeMeasurements.git
+[submodule "ExternalAddons/ofxHistoryPlot"]
+	path = ExternalAddons/ofxHistoryPlot
+	url = git@github.com:local-projects/ofxHistoryPlot.git
