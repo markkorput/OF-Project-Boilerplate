@@ -1,3 +1,12 @@
 [submodule "openFrameworks"]
 	path = openFrameworks
 	url = https://github.com/markkorput/openFrameworks.git
+[submodule "ExternalAddons/ofxSuperLog"]
+	path = ExternalAddons/ofxSuperLog
+	url = git@github.com:armadillu/ofxSuperLog.git
+[submodule "ExternalAddons/ofxRemoteUI"]
+	path = ExternalAddons/ofxRemoteUI
+	url = git@github.com:local-projects/ofxRemoteUI.git
+[submodule "ExternalAddons/ofxTimeMeasurements"]
+	path = ExternalAddons/ofxTimeMeasurements
+	url = git@github.com:armadillu/ofxTimeMeasurements.git
