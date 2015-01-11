@@ -8,7 +8,7 @@
 // callback function for ofxRemoteUI actions
 bool bRecalcNow = true;
 
-void serverCallback(RemoteUIServerCallBackArg arg){
+void ruiServerCallback(RemoteUIServerCallBackArg arg){
     switch (arg.action) {
         case CLIENT_DID_SET_PRESET:
         case CLIENT_UPDATED_PARAM:
@@ -26,14 +26,21 @@ void ofApp::setup(){
 
     ofSetFrameRate(60);
     ofSetVerticalSync(true);
-    //ofEnableAlphaBlending();
-    
-    // setup ofxRemoteUI
-    OFX_REMOTEUI_SERVER_SET_CALLBACK(serverCallback);
-    OFX_REMOTEUI_SERVER_SETUP(); 	//start server
+    ofEnableAlphaBlending();
+
     TIME_SAMPLE_SET_FRAMERATE(60);
+    // TIME_SAMPLE_ENABLE();
+
+    // setup ofxRemoteUI
+    RUI_SETUP();
+    RUI_SET_CALLBACK(ruiServerCallback);
+    // OFX_REMOTEUI_SERVER_SETUP(); 	//start server
+    
     // TODO: setup params here
-    OFX_REMOTEUI_SERVER_LOAD_FROM_XML();
+    RUI_NEW_GROUP("App");
+    RUI_DEFINE_VAR_WV(bool, "app-fullscreen", false);
+
+    RUI_LOAD_FROM_XML();
 }
 
 //--------------------------------------------------------------
@@ -44,6 +51,7 @@ void ofApp::update(){
 
     if(bRecalcNow){
         // TODO: perform post-param-change updates
+        ofSetFullscreen(RUI_VAR(bool, "app-fullscreen"));
     }
     
     TS_STOP("Update");
@@ -53,12 +61,19 @@ void ofApp::update(){
 void ofApp::draw(){
     TS_START("Draw");
 
+    ofBackgroundGradient(ofColor(150), ofColor(170));
+
     TS_STOP("Draw");
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    switch(key){
+        case 'f':
+            OFX_REMOTEUI_SERVER_SET_VAR(bool, "app-fullscreen", !RUI_VAR(bool, "app-fullscreen"));
+            bRecalcNow = true;
+            break;
+    }
 }
 
 //--------------------------------------------------------------
