@@ -1,6 +1,3 @@
-[submodule "openFrameworks"]
-	path = openFrameworks
-	url = https://github.com/markkorput/openFrameworks.git
 [submodule "ExternalAddons/ofxSuperLog"]
 	path = ExternalAddons/ofxSuperLog
 	url = git@github.com:armadillu/ofxSuperLog.git
@@ -13,3 +10,6 @@
 [submodule "ExternalAddons/ofxHistoryPlot"]
 	path = ExternalAddons/ofxHistoryPlot
 	url = git@github.com:local-projects/ofxHistoryPlot.git
+[submodule "openFrameworks"]
+	path = openFrameworks
+	url = git@github.com:markkorput/openFrameworks.git
