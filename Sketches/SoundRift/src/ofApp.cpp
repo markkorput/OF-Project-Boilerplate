@@ -293,5 +293,9 @@ void ofApp::gotMessage(ofMessage msg){
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
-	
+    string filePath = dragInfo.files[0];
+    LOG << "Loading audio file: " << filePath;
+    soundPlayer.loadSound(filePath);
+    soundPlayer.setLoop(true);
+    soundPlayer.play();
 }

@@ -48,4 +48,6 @@ public:
     ofVec3f demoRift;
     
     ofVec3f cursorGaze;
+    
+    ofSoundPlayer soundPlayer;
 };
