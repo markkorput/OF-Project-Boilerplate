@@ -2,6 +2,18 @@
 
 #include "ofMain.h"
 
+#include "ofxOculusDK2.h"
+
+typedef struct{
+    ofColor color;
+    ofVec3f pos;
+    ofVec3f floatPos;
+    float radius;
+    bool bMouseOver;
+    bool bGazeOver;
+} DemoSphere;
+
+
 class ofApp : public ofBaseApp{
 
 public:
@@ -19,5 +31,21 @@ public:
     void dragEvent(ofDragInfo dragInfo);
     void gotMessage(ofMessage msg);
 	void exit();
-
+    
+    void drawScene();
+    ofxOculusDK2		oculusRift;
+    
+    ofLight				light;
+    ofEasyCam			cam;
+    bool showOverlay;
+    bool predictive;
+    vector<DemoSphere> demos;
+    
+    ofVec3f cursor2D;
+    ofVec3f cursor3D;
+    
+    ofVec3f cursorRift;
+    ofVec3f demoRift;
+    
+    ofVec3f cursorGaze;
 };
