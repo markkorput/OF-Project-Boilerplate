@@ -13,3 +13,6 @@
 [submodule "openFrameworks"]
 	path = openFrameworks
 	url = git@github.com:markkorput/openFrameworks.git
+[submodule "ExternalAddons/ofxOculusDK2"]
+	path = ExternalAddons/ofxOculusDK2
+	url = git@github.com:obviousjim/ofxOculusDK2.git
